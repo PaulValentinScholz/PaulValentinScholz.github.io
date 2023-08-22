@@ -3,5 +3,65 @@
 }
 
 .content section {
-    padding: 1em 0 5em 0;
+    padding: 2em 0 2em 0;
+}
+
+.partner-container {
+    margin: 2em 0 2em 0;
+    display: flex;
+    height: 25vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partner-container div {
+    width: 45%;
+}
+
+.partner-container div img {
+    width: 100%;
+}
+
+/*Marquee*/
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; /* Adjust to your container width */
+}
+
+.marquee-items {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+    display: inline-block;
+    margin-right: 20px; /* Adjust the spacing between images */
+    width: 500px;
+    /*animation: scroll 20s linear infinite;*/
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/* Hide the scrollbar while keeping scroll functionality */
+::-webkit-scrollbar {
+    width: 0; /* Adjust the width to your preference */
 }
