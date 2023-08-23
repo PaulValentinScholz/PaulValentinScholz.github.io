@@ -36,25 +36,30 @@ darkModeBtn.addEventListener('click', () => {
 });
 
 
-//Marquee
+//Contact form
 
-const logos = document.querySelectorAll('.marquee-item');
+const form = document.getElementById("contact-form");
+const resultDiv = document.getElementById("contact-form-display");
 
-function createLogoClone() {
-    const firstLogo = logos[0].cloneNode(true);
-    document.querySelector('.partner-banner').appendChild(firstLogo);
-}
+form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the default form submission behavior
 
-function removeFirstLogo() {
-    const banner = document.querySelector('.partner-banner');
-    const firstLogo = logos[0];
-    banner.removeChild(firstLogo);
-}
+    // Get form input values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const msg = document.getElementById("message").value;
 
-function handleAnimationIteration() {
-    createLogoClone();
-    removeFirstLogo();
-}
+    // Create a new element to display the form inputs
+    // Set the innerHTML of the result div to the new content
+    resultDiv.innerHTML = `
+        <h4><u>This message was sent. We will reply within 1 - 2 business days.</u></h4>
+        <p>Name: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Message: ${msg}</p>
+    `;
 
-logos[logos.length - 1].addEventListener('animationiteration', handleAnimationIteration);
+    resultDiv.style.display = "block";
 
+    // Clear the form inputs
+    form.reset();
+});
