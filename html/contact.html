@@ -9,15 +9,16 @@
           integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://paulvalentinscholz.github.io/style/main.css" rel="stylesheet">
-    <title>DNA-GmbH - Home</title>
+    <title>DNA-GmbH - Contact</title>
 </head>
 <body>
 <!--NAVBAR-->
 <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
     <div class="container">
         <!-- You can add your logo or branding here -->
-        <a class="navbar-brand" href="#">
-            <img alt="Logo" class="d-inline-block align-text-center" height="50" src="img/logo/LogoOhneTextRechts.png"
+        <a class="navbar-brand" href="../index.html">
+            <img alt="Logo" class="d-inline-block align-text-center" height="50"
+                 src="../img/logo/LogoOhneTextRechts.png"
                  width="50">
             Data Numbers Analytics
         </a>
@@ -32,13 +33,13 @@
         <!-- Create a div for the links to surround the entire navbar -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home</a>
-                <a class="nav-item nav-link" href="html/about.html">About</a>
-                <a class="nav-item nav-link" href="html/services.html">Services</a>
-                <a class="nav-item nav-link" href="html/customers.html">Customers</a>
-                <a class="nav-item nav-link" href="html/partners.html">Partners</a>
-                <a class="nav-item nav-link" href="html/contact.html">Contact</a>
-                <a class="nav-item nav-link" href="html/legal.html">Legal</a>
+                <a class="nav-item nav-link" href="../index.html">Home</a>
+                <a class="nav-item nav-link" href="about.html">About</a>
+                <a class="nav-item nav-link" href="services.html">Services</a>
+                <a class="nav-item nav-link" href="customers.html">Customers</a>
+                <a class="nav-item nav-link" href="partners.html">Partners</a>
+                <a class="nav-item nav-link active" href="#">Contact</a>
+                <a class="nav-item nav-link" href="legal.html">Legal</a>
                 <div class="nav-item btn-group">
                     <button aria-expanded="false" aria-haspopup="true" class="btn btn-outline dropdown-toggle"
                             data-bs-toggle="dropdown" type="button">
@@ -55,25 +56,47 @@
                 </div>
             </div>
         </div>
-
     </div>
 </nav>
 
 <div class="container content">
     <section>
-        <h1>Home</h1>
+        <h1>Contact</h1>
         <div class="container mt-5">
-            <div>
-                <div></div>
-                <div></div>
-            </div>
-            <div>
-                <div></div>
-                <div></div>
-            </div>
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label class="form-label" for="name">Name:</label>
+                    <input class="form-control" id="name" name="name" placeholder="Max Mustermann" required type="text">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email:</label>
+                    <input class="form-control" id="email" name="email" placeholder="max@mustermann.com" required
+                           type="email">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="message" placeholder="Hello i'd like to..."
+                              required rows="4"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </section>
 
+    <section>
+        <div class="container mt-5">
+            <div id="contact-form-display" class="bg-body-tertiary border-round"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Find us at:</h2>
+        <div class="container mt-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510.733002544922!2d13.303059039977029!3d52.488744308013885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85094da56273d%3A0xf6875b8d1dc4ac0!2sHohenzollerndamm%2047%2C%2010709%20Berlin!5e0!3m2!1sde!2sde!4v1692779919076!5m2!1sde!2sde" width="100%" height="200" style="border-radius: 5px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
 </div>
 
 <footer class="py-4 bg-body-tertiary">
@@ -83,15 +106,14 @@
             <div class="col-md-4">
                 <h5>Über DNA L-GmbH</h5>
                 <ul class="list-unstyled">
-
                     <li><a class="nav-link active" href="#">Home</a></li>
-                    <li><a class="nav-link" href="html/about.html">About</a></li>
-                    <li><a class="nav-link" href="html/services.html">Services</a></li>
-                    <li><a class="nav-link" href="html/customers.html">Customers</a></li>
-                    <li><a class="nav-link" href="html/partners.html">Partners</a></li>
-                    <li><a class="nav-link" href="html/contact.html">Contact</a></li>
-                    <li><a class="nav-link" href="html/legal.html">Legal</a></li>
-                    <li><a class="nav-link" href="html/datenschutz.html">Datenschutz</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="customers.html">Customers</a></li>
+                    <li><a class="nav-link" href="partners.html">Partners</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="legal.html">Legal</a></li>
+                    <li><a class="nav-link" href="datenschutz.html">Datenschutz</a></li>
                 </ul>
             </div>
 
@@ -125,5 +147,5 @@
 <script crossorigin="anonymous"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script/main.js"></script>
+<script src="../script/main.js"></script>
 </html>
