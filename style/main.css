@@ -24,24 +24,17 @@
 
 /*Marquee*/
 .marquee-container {
-    overflow: hidden;
     white-space: nowrap;
-    width: 100%; /* Adjust to your container width */
-}
-
-.marquee-items {
-    display: inline-block;
-    animation: marquee 20s linear infinite;
+    overflow: hidden;
 }
 
 .marquee-item {
     display: inline-block;
-    margin-right: 20px; /* Adjust the spacing between images */
-    width: 500px;
-    /*animation: scroll 20s linear infinite;*/
+    margin-right: 20px; /* Adjust the spacing between logos */
+    animation: moveLeft 10s linear infinite; /* Adjust the animation duration */
 }
 
-@keyframes marquee {
+@keyframes moveLeft {
     0% {
         transform: translateX(100%);
     }
@@ -50,18 +43,7 @@
     }
 }
 
-@keyframes scroll {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-}
-
-
-
 /* Hide the scrollbar while keeping scroll functionality */
 ::-webkit-scrollbar {
-    width: 0; /* Adjust the width to your preference */
+    width: 0;
 }

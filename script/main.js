@@ -38,12 +38,23 @@ darkModeBtn.addEventListener('click', () => {
 
 //Marquee
 
-const marqueeItems = document.querySelector('.marquee-items');
+const logos = document.querySelectorAll('.marquee-item');
 
-marqueeItems.addEventListener('animationiteration', () => {
-    // When the animation iteration restarts, move the last item to the beginning
-    const items = document.querySelectorAll('.marquee-item');
-    const lastItem = items[items.length - 1];
-    marqueeItems.removeChild(lastItem);
-    marqueeItems.insertBefore(lastItem, items[0]);
-});
+function createLogoClone() {
+    const firstLogo = logos[0].cloneNode(true);
+    document.querySelector('.partner-banner').appendChild(firstLogo);
+}
+
+function removeFirstLogo() {
+    const banner = document.querySelector('.partner-banner');
+    const firstLogo = logos[0];
+    banner.removeChild(firstLogo);
+}
+
+function handleAnimationIteration() {
+    createLogoClone();
+    removeFirstLogo();
+}
+
+logos[logos.length - 1].addEventListener('animationiteration', handleAnimationIteration);
+
