@@ -52,7 +52,7 @@ form.addEventListener("submit", function (e) {
     // Create a new element to display the form inputs
     // Set the innerHTML of the result div to the new content
     resultDiv.innerHTML = `
-        <h4><u>This message was sent. We will reply within 1 - 2 business days.</u></h4>
+        <h4><u>Ihre Nachricht wurde erfolgreich versendet. Wir antworten innerhalb von 1-2 Werktagen.</u></h4>
         <p>Name: ${name}</p>
         <p>Email: ${email}</p>
         <p>Message: ${msg}</p>

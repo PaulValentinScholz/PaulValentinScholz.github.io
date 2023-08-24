@@ -1,27 +1,44 @@
 h1 {
-    text-transform: uppercase;
     padding: 0.3em 0 0.3em 0;
 }
 
 h2 {
-    text-transform: uppercase;
 }
 
 h4 {
     padding: 0 0 1em 0;
 }
 
-img {
+.news-feed {
+    display: flex;
+    justify-content: space-between;
+}
 
+.news-feed div {
+    display: flex;
+    width: 50%;
+    padding: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.news-feed div img {
+    width: 100%;
+}
+
+#startseite-banner {
+    width: 100%;
+    padding: 10px;
+}
+
+#startseite-banner img {
+    width: 100%;
 }
 
 .border-round {
     border-radius: 5px;
 }
 
-.content {
-    padding-top: 5vh;
-}
 
 .content section {
     padding: 2em 0 2em 0;
@@ -60,6 +77,14 @@ img {
 
 .partner-container div img {
     width: 100%;
+}
+
+.dienstleistungen div{
+    margin: 5px 0 5px 0;
+}
+
+.dienstleistungen img {
+    height: 200px;
 }
 
 /*Marquee*/
@@ -103,6 +128,23 @@ img {
     display: none;
 }
 
+footer {
+    margin-top: 100px;
+}
+
+
+footer div div div:nth-child(2) {
+display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer div div div:nth-child(3) {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
 @keyframes scroll-x {
     from {
         transform: translateX(0);
@@ -116,3 +158,4 @@ img {
 ::-webkit-scrollbar {
     width: 0;
 }
+
